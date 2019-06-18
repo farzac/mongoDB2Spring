@@ -15,7 +15,9 @@ Deve fazer o checkout desse projeto (mongoDB2Spring) e seguir o passo abaixo:
 git checkout https://github.com/farzac/mongoDB2Spring.git
 
 cd mongoDB2Spring
+
 sudo chmod 777 mvnw
+
 ./mvnw spring-boot:run
 
 
