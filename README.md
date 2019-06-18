@@ -46,6 +46,7 @@ Feito o download do Postan, informar o seguinte endereço:
 http://localhost:8080/api/clientes
 
 Para Gravar os dados, usar no body do Postman:
+
 {
    "id" : "123",
    "name": "fulando",
