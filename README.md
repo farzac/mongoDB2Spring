@@ -64,7 +64,10 @@ http://localhost:8080/api/clientes/123
 
 ________________________________
 
+Documentos de referência:
 
+
+https://www.youtube.com/watch?v=dkMSHEpJGYQ
 
 
 
