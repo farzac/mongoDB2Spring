@@ -1,12 +1,15 @@
 						MongoDB2Spring
 
 
+							
+                                                        
+																				
+																				
 
-Aplicação spring usando banco MongoDB.
+Aplicação Crud no banco MongoDB em spring utilizando API Rest com Swagger.
 
 
-
-Passos para testes:
+Segue abaixo os passos para execução dos testes:
 
 ________________________________
 
@@ -30,36 +33,14 @@ docker run -i -t --net="host" zaccantte/ubuntu-16.04-case-srbr
 
 
 
-
 ________________________________
 
 
-Para testes, será preciso utilizar o Postman
-
-https://www.getpostman.com/downloads/
+Para testes, utilizar interface do Swagger informando o seguinte endereço:
 
 
+http://localhost:8080/swagger-ui.html#/
 
-Feito o download do Postan, informar o seguinte endereço:
-
-
-http://localhost:8080/api/clientes
-
-Para Gravar os dados, usar no body do Postman:
-
-{
-   "id" : "123",
-   "name": "fulando",
-   "email": "fulano@gmail"
-}
-
-
-Para consultar os dados, passar o link acima usando o GET
-
-
-Para deletar os dados, passar o link abaixo no Postman usando o Delete
-
-http://localhost:8080/api/clientes/123
 
 
 ________________________________
@@ -68,6 +49,9 @@ Documentos de referência:
 
 
 https://www.youtube.com/watch?v=dkMSHEpJGYQ
+
+
+https://www.youtube.com/watch?v=qtHUwMqOYC0
 
 
 
