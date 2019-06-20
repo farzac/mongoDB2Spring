@@ -19,6 +19,10 @@ import com.farzac.crud.api.documents.Cliente;
 import com.farzac.crud.api.response.Response;
 import com.farzac.crud.api.service.ClienteService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+@Api(value = "API REST CRUD MongoDB")
 @RestController
 @RequestMapping(path = "/api/clientes")
 public class ClienteController {
@@ -26,16 +30,19 @@ public class ClienteController {
 	@Autowired
 	private ClienteService clienteService;
 
+	@ApiOperation(value = "Retorna uma lista de Clientes")
 	@GetMapping
 	public ResponseEntity<Response<List<Cliente>>> listarTodos() {
 		return ResponseEntity.ok(new Response<List<Cliente>>(this.clienteService.listarTodos()));
 	}
 
+	@ApiOperation(value = "Retorna o cliente filtrado pelo ID")
 	@GetMapping(path = "/{id}")
 	public ResponseEntity<Cliente> listarPorID(@PathVariable(name = "id") String id) {
 		return ResponseEntity.ok(this.clienteService.listarPorID(id));
 	}
 
+	@ApiOperation(value = "Efetua o cadastro de um cliente")
 	@PostMapping
 	public ResponseEntity<Response<Cliente>> cadastrar(@RequestBody Cliente cliente, BindingResult result) {
 		if (result.hasErrors()) {
@@ -46,6 +53,7 @@ public class ClienteController {
 		return ResponseEntity.ok(new Response<Cliente>(this.clienteService.cadastrar(cliente)));
 	}
 
+	@ApiOperation(value = "Atualiza os dados do cliente referente ao ID informado")
 	@PutMapping(path = "/{id}")
 	public ResponseEntity<Response<Cliente>> atualizar(@PathVariable(name = "id") String id, @RequestBody Cliente cliente,
 			BindingResult result) {
@@ -58,6 +66,7 @@ public class ClienteController {
 		return ResponseEntity.ok(new Response<Cliente>(this.clienteService.atualizar(cliente)));
 	}
 
+	@ApiOperation(value = "Deleta o cliente referente ao ID informado")
 	@DeleteMapping(path = "/{id}")
 	public ResponseEntity<Integer> remover(@PathVariable(name = "id") String id) {
 		this.clienteService.remover(id);
