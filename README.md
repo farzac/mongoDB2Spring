@@ -29,7 +29,7 @@ ________________________________
 
 Após checkout do projeto no github, será preciso pegar imagem do docher que contém o servidor MongoDB
 
-docker run -i -t --net="host" zaccantte/ubuntu-16.04-case-srbr
+docker run -i -t --net="host" zaccantte/ubuntu-16.04-mongo-swagger /bin/bash
 
 
 
