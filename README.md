@@ -28,6 +28,7 @@ Após checkout do projeto no github, será preciso pegar imagem do docker que co
 
 docker run -i -t --net="host" zaccantte/ubuntu-16.04-mongo-swagger /bin/bash
 
+mongod	
 
 
 ________________________________
